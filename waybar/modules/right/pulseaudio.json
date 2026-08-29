@@ -1,0 +1,18 @@
+{
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon} (c_o)",
+    "format-bluetooth-muted": "x-_-x {icon} (c_x)",
+    "format-muted": "x-_-x",
+    "format-icons": {
+      "headphone": "q-_-p",
+      "hands-free": "\\(-_-)/",
+      "headset": "d-_-b",
+      "phone": "[::]",
+      "portable": "o)",
+      "car": "CAR",
+      "default": ["x-_-x", ")-_-(", "))-_-(("]
+    },
+    "on-click": "pavucontrol"
+  }
+}

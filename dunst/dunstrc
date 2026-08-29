@@ -1,0 +1,18 @@
+[global]
+    origin = bottom-center
+    offset = (0, 100)
+
+    font = NotoSansMono Bold 18
+    alignment = center
+
+    corner_radius = 8
+
+    frame_width = 1
+
+    background = "#00000080"
+    foreground = "#ffffff"
+    frame_color = "#ffffff4d"
+
+    notification_limit = 1
+	
+    timeout = 1

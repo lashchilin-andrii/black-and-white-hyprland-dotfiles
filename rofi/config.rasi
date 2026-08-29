@@ -1,0 +1,111 @@
+configuration {
+    /* List of enabled modes */
+    modi: "run,drun";
+    font: "Noto Sans Mono Bold 21";
+    /* Enable application icons */
+    terminal: "kitty";
+    /* Format for drun mode (App Name) */
+    drun-display-format: "{name}";
+    /* Position of window (0 is center) */
+    location: 0;
+    /* Keep command history */
+    disable-history: false;
+    /* Hide the vertical scrollbar */
+    hide-scrollbar: true;
+    
+    /* Disable the mode switcher */
+    sidebar-mode: false;
+}
+
+/* Load the color variables from the theme */
+@theme "colors"
+
+/* Base element inheritance */
+element-text, element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+/* The main outer window properties */
+window {
+    border: 1px;
+    border-color: @border-col;
+    border-radius: 8px;
+    background-color: @bg-col; /* Only apply background opacity HERE */
+    width: 600px;
+    padding: 5px 0 5px 0;
+}
+
+/* The main internal container */
+mainbox {
+    background-color: transparent;
+}
+
+/* The search bar area container */
+inputbar {
+    children: [prompt, entry];
+    background-color: transparent;
+}
+
+/* The mode label */
+prompt {
+    enabled: false;
+}
+
+/* The text input area */
+entry {
+    padding: 10px 35px;
+    text-color: @fg-col;
+    background-color: transparent;
+    placeholder: "Search...";
+}
+
+/* The list of results */
+listview {
+    lines: 5;
+    columns: 1;
+    background-color: transparent;
+}
+
+/* Individual items in the list */
+element {
+    padding: 10px 35px;
+    background-color: transparent;
+    text-color: @fg-col;
+}
+
+/* Icon size within the list */
+element-icon {
+    enabled: false;
+}
+
+/* Styling for the currently selected item container */
+element selected {
+    background-color: @selected-col;
+    text-color: @fg-col2;
+}
+
+/* Force text element inside selection to remain completely transparent */
+element selected element-text {
+    background-color: transparent;
+    text-color:       @fg-col2;
+}
+
+/* --- Error Message Styling --- */
+
+/* The container window for the error */
+error-message {
+    background-color: @bg-col;
+    padding: 50px; 
+}
+
+/* The actual text element */
+textbox {
+    text-color: @fg-col;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}

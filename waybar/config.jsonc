@@ -1,0 +1,39 @@
+// -*- mode: jsonc -*-
+{
+    "include": [
+        "~/.config/waybar/modules/left/workspaces.json",
+        "~/.config/waybar/modules/left/window.json",
+
+        "~/.config/waybar/modules/center/clock.json",
+
+        "~/.config/waybar/modules/right/backlight.json",
+        "~/.config/waybar/modules/right/battery.json",
+        "~/.config/waybar/modules/right/power-profiles-daemon.json",
+        "~/.config/waybar/modules/right/pulseaudio.json",
+        "~/.config/waybar/modules/right/tray.json",
+        "~/.config/waybar/modules/right/power-menu.json",
+        "~/.config/waybar/modules/right/custom-language.json"
+    ],
+
+    "spacing": 10,
+    "margin-left": 15,
+    "margin-right": 15,
+    "margin-top": 10,
+    "margin-bottom": 0,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "custom/language",
+        "pulseaudio",
+        "power-profiles-daemon",
+        "battery",
+        "tray",
+        "custom/power-menu"
+    ]
+}

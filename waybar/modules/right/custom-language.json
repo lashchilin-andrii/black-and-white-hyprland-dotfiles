@@ -1,0 +1,8 @@
+{
+  "custom/language": {
+    "exec": "~/.config/waybar/scripts/language.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "hyprctl switchxkblayout current next"
+  }
+}
