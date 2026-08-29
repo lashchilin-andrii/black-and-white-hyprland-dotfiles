@@ -29,3 +29,9 @@ This repository includes configuration files for:
     📁 XDG User Dirs — Standard user directory structure
 
 ---
+
+## TODO
+
+```
+1. Clean waybar modules
+```
