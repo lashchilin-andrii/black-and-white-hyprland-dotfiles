@@ -1,4 +1,4 @@
-# 🖤 Monochrome Hyprland Dotfiles
+# 🖤 B&W Hyprland Dotfiles
 
 A minimalist, clean, black-and-white Hyprland environment setup for Arch Linux (or any Wayland-based distribution).
 
