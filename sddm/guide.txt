@@ -1,0 +1,5 @@
+chmod o+rx /home/USERNAME
+chmod -R o+r /home/USERNAME/pictures/wallpapers
+
+Or move the pictures to:
+/usr/share/sddm/wallpapers/

@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtGraphicalEffects 1.15
 import SddmComponents 2.0
+import Qt.labs.folderlistmodel 2.15
 
 Rectangle {
     id: container
@@ -18,14 +19,27 @@ Rectangle {
     property color borderFocused: "#4dffffff"
 
     property int sessionIndex: sessionModel.lastIndex
-    
     property bool isInputFocused: nameInput.activeFocus || passwordInput.activeFocus
+
+    // --- WALLPAPER LIST MODEL ---
+    FolderListModel {
+        id: wallpaperModel
+        folder: "file:///home/andrii/pictures/wallpapers"
+        nameFilters: ["*.jpg", "*.png", "*.jpeg", "*.webp"]
+        showDirs: false
+
+        onCountChanged: {
+            if (count > 0 && backgroundImage.source == "") {
+                var randomIndex = Math.floor(Math.random() * count)
+                backgroundImage.source = get(randomIndex, "fileURL")
+            }
+        }
+    }
 
     // Base Wallpaper Image
     Image {
         id: backgroundImage
         anchors.fill: parent
-        source: "https://unsplash.it/2560/1600?night"
         fillMode: Image.PreserveAspectCrop
         asynchronous: true
         visible: false // Hidden because FastBlur renders it directly
