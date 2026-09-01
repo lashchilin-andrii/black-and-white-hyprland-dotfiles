@@ -30,16 +30,16 @@ window#waybar {
 
 #workspaces button {
     padding: 0 10px;
-    color: #888888;
     border-radius: 4px;
 }
-#workspaces button.active {
-    color: #ffffff;
-    font-weight: bold;
+#workspaces button label{
+    color: rgba(255, 255, 255, 0.6);
 }
 #workspaces button:hover {
-    color: #ffffff;
     background: rgba(255, 255, 255, 0.1);
+}
+#workspaces button.active label {
+    color: rgba(255, 255, 255, 1.0);
 }
 
 #power-profiles-daemon.performance {
@@ -52,7 +52,7 @@ window#waybar {
     color: #00FF00;
 }
 #power-profiles-daemon.default {
-    color: #cccccc;
+    color: #ffffff;
 }
 
 #battery.warning {
