@@ -2,17 +2,14 @@
 {
     "include": [
         "~/.config/waybar/modules/left/workspaces.json",
-        "~/.config/waybar/modules/left/window.json",
 
         "~/.config/waybar/modules/center/clock.json",
 
-        "~/.config/waybar/modules/right/backlight.json",
-        "~/.config/waybar/modules/right/battery.json",
-        "~/.config/waybar/modules/right/power-profiles-daemon.json",
+        "~/.config/waybar/modules/right/custom-language.json",
         "~/.config/waybar/modules/right/pulseaudio.json",
-        "~/.config/waybar/modules/right/tray.json",
-        "~/.config/waybar/modules/right/power-menu.json",
-        "~/.config/waybar/modules/right/custom-language.json"
+        "~/.config/waybar/modules/right/power-profiles-daemon.json",
+        "~/.config/waybar/modules/right/battery.json",
+        "~/.config/waybar/modules/right/tray.json"
     ],
 
     "spacing": 10,
@@ -32,7 +29,6 @@
         "pulseaudio",
         "power-profiles-daemon",
         "battery",
-        "tray",
-        "custom/power-menu"
+        "tray"
     ]
 }
