@@ -291,11 +291,16 @@ hl.bind("XF86AudioStop",  hl.dsp.exec_cmd("playerctl --all-players stop"), { loc
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"),         { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),           { locked = true })
 
+-- Screen Lock
 hl.bind("F10", hl.dsp.exec_cmd("hyprlock"))
 
+-- Calculator
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("kitty --class calc -e calc"))
 
+-- Take region screenshot and edit with Swappy
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+-- Capture region, edit with Swappy, and extract text via Tesseract to clipboard
+hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("~/.config/hypr/scripts/extract-text.sh"))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----

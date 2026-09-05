@@ -1,18 +1,10 @@
 configuration {
-    /* List of enabled modes */
-    modi: "run,drun";
-    font: "Noto Sans Mono Bold 21";
     /* Enable application icons */
     terminal: "kitty";
-    /* Format for drun mode (App Name) */
-    drun-display-format: "{name}";
     /* Position of window (0 is center) */
     location: 0;
-    /* Keep command history */
-    disable-history: false;
     /* Hide the vertical scrollbar */
     hide-scrollbar: true;
-    
     /* Disable the mode switcher */
     sidebar-mode: false;
 }
@@ -26,19 +18,23 @@ window {
     border-color: @border-col;
     border-radius: 8px;
     background-color: @bg-col;
-    width: 30%;
+    width: 266px;
 }
 
 /* 2. mainbox */
 mainbox {
+    orientation: horizontal;
+    children: [ inputbar, listview ];
     background-color: transparent;
     padding: 10px;
+    spacing: 10px;
 }
 
 /* 3. inputbar */
 inputbar {
-    children: [prompt, entry];
+    children: [ entry ];
     background-color: transparent;
+    orientation: horizontal;
 }
 
 /* 4. prompt */
@@ -48,24 +44,30 @@ prompt {
 
 /* 5. entry */
 entry {
-    padding: 10px 10px;
+    enabled: true;
+    padding: 10px 0px;
     text-color: @fg-col;
     background-color: transparent;
     placeholder: "Search...";
+    placeholder-color: @fg-col;
 }
 
 /* 6. listview */
 listview {
-    lines: 5;
-    columns: 1;
+    layout: horizontal;
+    lines: 10;
+    spacing: 8px;
+    fixed-height: false;
+    fixed-columns: false;
     background-color: transparent;
 }
 
 /* 7. element */
 element {
-    padding: 10px 10px;
+    padding: 10px 15px;
     background-color: transparent;
     text-color: @fg-col;
+    border-radius: 4px;
 }
 
 /* Styling for the currently selected item container */
@@ -85,6 +87,8 @@ element-icon {
 element-text {
     background-color: transparent;
     text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
 }
 
 /* Force text element inside selection to remain completely transparent */
