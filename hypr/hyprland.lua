@@ -38,9 +38,6 @@ end)
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
-env = QT_QPA_PLATFORMTHEME,qt6ct
-env = QT_QPA_PLATFORM,wayland
-
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("QT_QPA_PLATFORM", "wayland")
  
@@ -246,7 +243,8 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) 
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))   -- dwindle only
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -340,11 +338,20 @@ hl.window_rule({
 -- })
 -- overlayLayerRule:set_enabled(false)
 
--- Hyprland-run windowrule
 hl.window_rule({
-    name  = "move-hyprland-run",
-    match = { class = "hyprland-run" },
+    name  = "Picture-in-Picture",
+    match = { title = "Picture-in-Picture" },
 
-    move  = "20 monitor_h-120",
-    float = true,
+    center = true,
+    size = {480, 270},
+    float  = true,
+})
+
+hl.window_rule({
+    name  = "Calculator",
+    match = { class = "calc" },
+
+    center = true,
+    size = {400, 500},
+    float  = true,
 })

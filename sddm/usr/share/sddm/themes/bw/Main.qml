@@ -86,7 +86,7 @@ Rectangle {
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: textColor
                 font.family: fontFamily
-                font.pixelSize: 180
+                font.pixelSize: 120
                 font.bold: true
 
                 function updateTime() {
@@ -99,7 +99,7 @@ Rectangle {
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: textSecondary
                 font.family: fontFamily
-                font.pixelSize: 36
+                font.pixelSize: 21
 
                 function updateDate() {
                     dateText.text = Qt.formatDateTime(new Date(), "dddd, MMMM d")

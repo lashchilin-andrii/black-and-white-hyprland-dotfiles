@@ -22,8 +22,7 @@
     "margin-bottom": 0,
 
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/workspaces"
     ],
     "modules-center": [
         "clock"
