@@ -228,6 +228,11 @@ hl.device({
     sensitivity = -1,
 })
 
+hl.device({
+    name        = "razer-razer-deathadder-essential",
+    sensitivity = -1,
+})
+
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------

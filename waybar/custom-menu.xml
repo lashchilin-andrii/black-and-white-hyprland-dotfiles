@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+    <child>
+      <object class="GtkMenuItem" id="switch-power-profile">
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Power Profile</property>
+            <property name="halign">center</property>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="right_attach">1</property>
+        <property name="top_attach">0</property>
+        <property name="bottom_attach">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="switch-live-captions">
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Live Captions</property>
+            <property name="halign">center</property>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="right_attach">2</property>
+        <property name="top_attach">0</property>
+        <property name="bottom_attach">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="switch-night-light">
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Night Light</property>
+            <property name="halign">center</property>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="left_attach">0</property>
+        <property name="right_attach">1</property>
+        <property name="top_attach">1</property>
+        <property name="bottom_attach">2</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="switch-aeroplane-mode">
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Aeroplane Mode</property>
+            <property name="halign">center</property>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="left_attach">1</property>
+        <property name="right_attach">2</property>
+        <property name="top_attach">1</property>
+        <property name="bottom_attach">2</property>
+      </packing>
+    </child>
+  </object>
+</interface>

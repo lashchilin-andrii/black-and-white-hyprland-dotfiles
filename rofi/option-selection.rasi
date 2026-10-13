@@ -1,0 +1,54 @@
+configuration {
+    font: "Noto Sans Mono Bold 21";
+    location: 0;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+}
+
+@theme "colors"
+
+window {
+    border: 1px;
+    border-color: @border-col;
+    border-radius: 8px;
+    background-color: @bg-col;
+    width: 530px;
+}
+
+mainbox {
+    background-color: transparent;
+    padding: 10px;
+    children: [listview];
+}
+
+inputbar {
+    enabled: false;
+}
+
+listview {
+    lines: 1;
+    columns: 1;
+    fixed-columns: true;
+    spacing: 10px;
+    scrollbar: false;
+    background-color: transparent;
+}
+
+element {
+    padding: 30px 0px;
+    background-color: transparent;
+    text-color: @fg-col;
+    border-radius: 2px;
+}
+
+element selected {
+    background-color: @selected-col;
+    text-color: @fg-col2;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}

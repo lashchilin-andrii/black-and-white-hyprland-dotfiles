@@ -1,0 +1,7 @@
+{
+    "custom/menu": {
+    "format": "///",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/custom-menu.sh"
+}
+}

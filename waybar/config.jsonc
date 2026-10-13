@@ -5,6 +5,7 @@
 
         "~/.config/waybar/modules/center/clock.json",
 
+        "~/.config/waybar/modules/right/custom-menu.json",
         "~/.config/waybar/modules/right/custom-language.json",
         "~/.config/waybar/modules/right/pulseaudio.json",
         "~/.config/waybar/modules/right/power-profiles-daemon.json",
@@ -27,8 +28,8 @@
     "modules-right": [
         "custom/language",
         "pulseaudio",
-        "power-profiles-daemon",
         "battery",
-        "tray"
+        "tray",
+        "custom/menu"
     ]
 }
