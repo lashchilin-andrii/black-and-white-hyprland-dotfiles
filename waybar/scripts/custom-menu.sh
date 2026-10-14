@@ -27,16 +27,22 @@ power_profile() {
 
     new=${profiles[index]}
     powerprofilesctl set "$new"
-    notify "${new//-/ }"
+
+    # Replaces hyphens with spaces and capitalizes the first letter of each word
+    local notify_msg="${new//-/ }"
+    notify_msg=$(echo "$notify_msg" | sed 's/\b\([a-z]\)/\U\1/g')
+
+    notify "$notify_msg"
 }
+
 
 night_light() {
     if pgrep -x gammastep >/dev/null; then
         pkill gammastep
-        notify "Night Light" "Disabled"
+        notify "Disabled"
     else
-        gammastep -O 3500 &
-        notify "Night Light" "Enabled"
+        gammastep -O 4000 &
+        notify "Enabled"
     fi
 }
 
